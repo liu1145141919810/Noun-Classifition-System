@@ -12,4 +12,33 @@ Every time the total classification tree would be narrowed to a smaller range, f
 ## The output form
 1) Each line shows the node that the system would throw out to ask the tester, untill the final limited range for the requiered node is fixed
 ## Examples and Explanation
-!
+### 1) Instance input data is following:
+5 2
+10 50 10 10 20
+1 1 3 3
+5
+2
+### 2) It would construct a classification tree as following
+![Examples of using structure](Pictures/Picture6.png.png)
+### 3) Process analysis
+#### Instance 1
+![Examples of implementing](Pictures/Picture7.png.png)
+1) Start with the root node, system would firstly calculate the the superiority for each node `It's 100 0 20 80 60`
+2) Then it would test the 2ed node ,due to it not contains the aim, the customer would answer `false`, thus it would be discarded from the range
+3) Calculating the superiority for `node1`,'node3`,`node4`,`node5`, would get the values 50 30 30 10, then consider the node 5
+4) due to node 5 is the required node itself, the finding process is over and would be printed then
+#### Instance 2
+![Examples of implementing](Pictures/Picture8.png.png)
+1) Start with the root node ,system calculate the superiority for each node. `(100,0,20,,80,60)`
+2) Then test the second node and remove it
+3) Caluclating the left nodes' superiority `(50,30,30,10)`
+4) Test and discard the node five
+5) Calculating the remaining nodes, results are `30 10 10`
+6) Test Node 3 ,the remaining would be calculated as `20,0` for the node3 and node4, thus test the node4
+7) Node 4 doesn't contain the requiered Node, thus discard it.
+8) There is only the node3 left, the classification is clear and terminate the programm
+### 4) The output that would get
+2 5
+2 5 3 4
+## How to implement in your file
+Include the Noun_Classificationm file and construct a `System` class to use it
