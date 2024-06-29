@@ -3,7 +3,6 @@
 #include<iostream>
 #include<sstream>
 #include<string>
-#include<queue>
 #include<vector>
 struct Node{
     int index;
