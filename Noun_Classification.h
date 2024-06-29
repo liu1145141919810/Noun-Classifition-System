@@ -15,7 +15,7 @@ struct Node{
 };
 class System{
     public:
-    solution(int all,int ask){
+    System(int all,int ask){
         std::string str1,str2;
         std::getline(std::cin,str1);
         std::getline(std::cin,str2);
